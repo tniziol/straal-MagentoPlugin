@@ -65,7 +65,7 @@ php bin/magento cache:flush
 
 Notifications from Straal allow for automatic payment status updates for your orders. We highly recommend configuring them. 
 
-1. Go to [Straal Kompas](https://kompas.straal.com) and log in (if you don't have access contact our [support team](mailto:support@straal.com)
+1. Go to [Straal Kompas](https://kompas.straal.com) and log in - if you don't have access contact our [support team](mailto:support@straal.com)
 2. Navigate to "Notification endpoints".
 3. Click on "Create".
 4. Enter URL that is provided in Straal Magento plugin settings.
