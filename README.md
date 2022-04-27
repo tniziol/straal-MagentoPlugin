@@ -1,9 +1,6 @@
 # straal-MagentoPlugin
 Magento plugin used for integration with Straal payment gateway.
 
-<p align="left">
-    <img height=80 src="web/logo_github.png"/>
-</p>
 
 ---
 
