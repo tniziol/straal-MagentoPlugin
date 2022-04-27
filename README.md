@@ -46,10 +46,13 @@ Make sure:
 2. Unzip downloaded file
 3. Connect to your ftp server and copy the unzipped content to the app/code/straal directory of your Magento 2 shop. If there is no such directory, create one.
 4. After installation using composer or after copying the files from the console, run following command in shell (ssh command) from website root folder
+'''
+{
 php bin/magento module:enable Straal_Payment
 php bin/magento setup:upgrade
 php bin/magento cache:flush
-
+}
+'''
 
 
 ## Activate plugin in Magento admin panel
