@@ -1,0 +1,24 @@
+{
+  "name": "straal/payment",
+  "description": "Straal Payment Gateway for Magento 2",
+  "type": "magento2-module",
+  "version": "2.0.0",
+  "license": [
+    "OSL-3.0"
+  ],
+  "require": {
+    "php": "~5.5.0|~5.6.0",
+    "magento/magento-composer-installer": "*",
+    "magento/module-sales": "*",
+    "magento/module-payment": "*",
+    "magento/module-quote": "*"
+  },
+  "extra": {
+    "map": [
+      [
+        "*",
+        "Straal/Payment"
+      ]
+    ]
+  }
+}

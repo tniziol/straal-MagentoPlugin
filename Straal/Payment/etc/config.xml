@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <straal_payment>
+				<active>1</active>
+                <title>Straal</title>
+                <model>Straal\Payment\Model\Payment</model>
+                <redirect_url>straal/standard/redirect</redirect_url>                
+				<notification_url>straal/standard/notification</notification_url>   				
+				<debug>1</debug>				
+			  	<can_refund>1</can_refund>
+                <can_refund_partial_per_invoice>1</can_refund_partial_per_invoice>
+            </straal_payment>
+        </payment>
+    </default>
+</config>

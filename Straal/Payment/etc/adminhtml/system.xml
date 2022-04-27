@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="payment">
+            <group id="straal_payment" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="0">                              
+				<label><![CDATA[Straal]]></label>
+                <field id="active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enable Straal</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Title</label>
+					<tooltip><![CDATA[Title of payment method that user sees when placing the order. By default "Straal".]]></tooltip>
+                </field>				    
+				<field id="api_key" translate="label" type="text" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>API Key</label>		
+					<tooltip><![CDATA[API Key for authorizing a transaction. Contact your account manager to receive it or configure it in Straal Kompas.]]></tooltip>
+                </field>					
+				<field id="sandbox_mode" translate="label" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Sandbox mode</label>
+					<tooltip><![CDATA[You need a separate API key and test service to use the sandbox mode.]]></tooltip>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="sandbox_api_key" translate="label" type="text" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="0">			
+                    <label>Sandbox API Key</label> 					
+					<tooltip><![CDATA[You need a separate API key and test service to use the sandbox mode.]]></tooltip>
+                </field>				
+				<field id="notify_config" translate="label" type="label" sortOrder="14" showInDefault="1" showInWebsite="1" showInStore="0">
+						<label>Notifications configuration</label> 
+						<frontend_model>Straal\Payment\Model\Config\Notificationconf</frontend_model>
+						<comment>Notifications from Straal allow for automatic payment status updates for your orders. To make notifications work you need to provide Straal staff with Magento Callback URL and authorization credentials (should be also defined in user/password fields below)</comment>
+				</field>									
+				<field id="notify_url" translate="label" type="label" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="0">			
+                    <label>Notification URL</label> 
+					<frontend_model>Straal\Payment\Model\Config\Notificationurl</frontend_model>
+					<tooltip><![CDATA[We will POST the notifications about the payment status at this URL. To configure the notifications provide callback URL to your Straal Account Manager.]]></tooltip>
+				
+                </field>														
+				<field id="notify_user" translate="label" type="text" sortOrder="16" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Notifications username</label>		
+					<tooltip><![CDATA[Username to authenticate order status updates.]]></tooltip>
+                </field>
+				<field id="notify_pass" translate="label" type="text" sortOrder="17" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Notifications password</label>		
+					<tooltip><![CDATA[Password to authenticate order status updates.]]></tooltip>
+                </field>
+				<field id="debug" translate="label" type="select" sortOrder="18" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Debug Log</label>
+					<tooltip><![CDATA[Enable the logging of info messages.]]></tooltip>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
